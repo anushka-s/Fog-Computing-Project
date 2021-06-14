@@ -26,8 +26,8 @@ import org.fog.utils.distribution.DeterministicDistribution;
 
 import java.util.*;
 
-public class Birbnetes {
-    static int numOfFogDevices = 2;
+public class Sample {
+    static int numOfFogDevices = 5;
     static int numOfClientsPerFogDevice = 2;
     static List<FogDevice> fogDevices = new ArrayList<>();
     static Map<String, Integer> getIdByName = new HashMap<>();
@@ -70,7 +70,8 @@ public class Birbnetes {
     //10-scheduling interval
     //0-latency (delay)
 
-    private static Application createApplication(String appId, int brokerId) {
+    @SuppressWarnings("serial")
+	private static Application createApplication(String appId, int brokerId) {
         Application application = Application.createApplication(appId, brokerId);
         application.addAppModule("ClientModule", 16);
         application.addAppModule("MainModule", 120);
@@ -171,16 +172,16 @@ public class Birbnetes {
 
     public static void main(String[] args) {
 
-        Log.printLine("Starting Birbnetes...");
+        Log.printLine("Starting Sample...");
 
         try {
             //Log.disable();
-            int num_user = 4; // number of cloud users
+            int num_user = 12; // number of cloud users
             Calendar calendar = Calendar.getInstance();
 
             CloudSim.init(num_user, calendar, false);
 
-            String appId = "birbnetes"; // identifier of the application
+            String appId = "sample"; // identifier of the application
             FogBroker broker = new FogBroker("broker");
 
             Application application = createApplication(appId, broker.getId());
@@ -209,7 +210,7 @@ public class Birbnetes {
 
             CloudSim.stopSimulation();
 
-            Log.printLine("Birbnetes finished!");
+            Log.printLine("Sample finished!");
         } catch (Exception e) {
             e.printStackTrace();
             Log.printLine("Unwanted errors happen");

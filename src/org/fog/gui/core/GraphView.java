@@ -229,7 +229,7 @@ public class GraphView extends JPanel {
 				
 				
 				// draw edges first
-				// TODO: we draw one edge two times at the moment because we have an undirected graph. But this
+				// To do: we draw one edge two times at the moment because we have an undirected graph. But this
 				// shouldn`t matter because we have the same edge costs and no one will see in. Perhaps refactor later.
 				for (Entry<Node, List<Edge>> entry : graph.getAdjacencyList().entrySet()) {
 
@@ -281,7 +281,7 @@ public class GraphView extends JPanel {
 			Map<Integer, List<PlaceHolder>> levelToPlaceHolderMap,
 			List<PlaceHolder> endpointPlaceHolders,
 			Map<Integer, List<Node>> levelMap, List<Node> endpoints, int minLevel, int maxLevel) {
-		// TODO Auto-generated method stub
+		// TO do: Auto-generated method stub
 		Map<Node, Coordinates> coordForNodesMap = new HashMap<Node, Coordinates>();
 		Map<Node, List<Node>> childrenMap = createChildrenMap();
 		
