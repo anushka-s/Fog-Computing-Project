@@ -7,7 +7,7 @@ public class Login{
 	 * @param args
 	 */
 	public static void main(String[] args) {
-        JFrame frame = new JFrame("JFrame Example");  
+        JFrame frame = new JFrame("Login Form");  
 		JButton blogin = new JButton("Login");
 		JPanel panel = new JPanel();
 		JTextField txuser = new JTextField(15);
