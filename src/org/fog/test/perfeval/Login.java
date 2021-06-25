@@ -37,24 +37,24 @@ public class Login{
 
 
 
-blogin.addActionListener(new ActionListener() {
-public void actionPerformed(ActionEvent ae) {
-String puname = txuser.getText();
-String ppaswd = String.valueOf(pass.getPassword());
-if(puname.equals("192.168.1.10") && ppaswd.equals("fe80::3c94:b419:fc76:8fa0%20"))
-	{
-	StartApp regFace =new StartApp();
-	regFace.setVisible(true);
-	frame.dispose();
-	} 
-else {
-	JOptionPane.showMessageDialog(null,"Wrong IP/MAC Address");
-	txuser.setText("");
-	pass.setText("");
-	txuser.requestFocus(); 
+		blogin.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent ae) {
+		String puname = txuser.getText();
+		String ppaswd = String.valueOf(pass.getPassword());
+		if(puname.equals("192.168.1.10") && ppaswd.equals("fe80::3c94:b419:fc76:8fa0%20"))
+			{
+			StartApp regFace =new StartApp();
+			regFace.setVisible(true);
+			frame.dispose();
+			} 
+		else {
+			JOptionPane.showMessageDialog(null,"Wrong IP/MAC Address");
+			txuser.setText("");
+			pass.setText("");
+			txuser.requestFocus(); 
+			}
+		
+		}
+		});
 	}
-
-}
-});
-}
 }

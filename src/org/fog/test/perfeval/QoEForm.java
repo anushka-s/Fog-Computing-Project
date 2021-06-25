@@ -103,10 +103,10 @@ public class QoEForm{
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 
-blogin.addActionListener(new ActionListener() {
-public void actionPerformed(ActionEvent ae) {
-	
-}
-});
-}
+		blogin.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent ae) {
+			
+		}
+		});
+	}
 }
