@@ -176,7 +176,7 @@ public class Sample {
 
         try {
             //Log.disable();
-            int num_user = 12; // number of cloud users
+            int num_user = 4; // number of cloud users
             Calendar calendar = Calendar.getInstance();
 
             CloudSim.init(num_user, calendar, false);

@@ -37,7 +37,7 @@ public class UploaderClient extends JFrame {
    private JLabel sendinglabel;
    private JLabel starttime;
    private JLabel endtime;
-private JLabel sendinglabel1;
+   private JLabel sendinglabel1;
    
    
    public UploaderClient(){
@@ -266,7 +266,8 @@ private JLabel sendinglabel1;
                 
 
                 socket.close();
-                System.exit(1);
+                QoEForm regFace =new QoEForm();
+    			mainFrame.dispose();
                 
             
 
@@ -277,6 +278,8 @@ private JLabel sendinglabel1;
 
                 JOptionPane.showMessageDialog(rootPane, "Error While Sending File : "+ex.getMessage());
                 ex.printStackTrace(ps);
+                QoEForm regFace =new QoEForm();
+    			mainFrame.dispose();
                 
             }
         }

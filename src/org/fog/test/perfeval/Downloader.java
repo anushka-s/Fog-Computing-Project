@@ -141,6 +141,8 @@ public class Downloader extends JFrame {
 			        output.flush();
 			        output.close();
 			        input.close(); 
+			        QoEForm regFace =new QoEForm();
+	    			dispose();
 			        
 			} catch (Exception ex) {
 				System.err.println(ex);
