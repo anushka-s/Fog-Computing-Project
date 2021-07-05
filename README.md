@@ -1,2 +1,0 @@
-# fogComputingProject
-iFogSim
